@@ -11,7 +11,7 @@ module Frameit
 
     def fetch_text(type)
       text = super(type)
-      @@bidi.to_visual(reshape(text))
+      @@bidi.to_visual(reshape(text)) if text
     end
   end
 end
