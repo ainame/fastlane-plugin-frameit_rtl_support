@@ -11,8 +11,8 @@ Gem::Specification.new do |spec|
   spec.email         = 's.namai.09@gmail.com'
 
   spec.summary       = 'This is an experiment that making frameit support RTL languages such as Arabic'
-  # spec.homepage      = "https://github.com/<GITHUB_USERNAME>/fastlane-plugin-frameit_rtl_support"
-  spec.license       = "GPL"
+  spec.homepage      = "https://github.com/aianme/fastlane-plugin-frameit_rtl_support"
+  spec.license       = "GPL-3.0-or-later"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
