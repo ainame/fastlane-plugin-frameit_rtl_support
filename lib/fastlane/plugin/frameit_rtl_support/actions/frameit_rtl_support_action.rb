@@ -9,6 +9,9 @@ module Fastlane
 
         require 'frameit'
 
+        # Override existing runner to return RTLEditor
+        require 'frameit/runner_ext'
+
         UI.message("Framing screenshots at path #{config[:path]} (via frameit)")
 
         Dir.chdir(config[:path]) do

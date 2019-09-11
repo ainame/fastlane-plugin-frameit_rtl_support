@@ -1,4 +1,5 @@
 require 'frameit'
+require_relative 'rtl_editor'
 
 module Frameit
   class Runner
@@ -7,7 +8,7 @@ module Frameit
       if screenshot.mac?
         return MacEditor.new(screenshot)
       else
-        return RTLEditor.new(screenshot, Frameit.config[:debug_mode])
+        return ::Frameit::RTLEditor.new(screenshot, Frameit.config[:debug_mode])
       end
     end
   end
