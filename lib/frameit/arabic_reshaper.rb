@@ -224,6 +224,10 @@ module Frameit
 
         l
       end
+
+      def is_haraka(target)
+        ::Frameit::ArabicReshaper::HARAKAT.include? target
+      end
     end
 
     def get_reshaped_word(unshaped_word)

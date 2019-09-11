@@ -3,11 +3,11 @@ require 'frameit'
 module Frameit
   class Runner
     # override Frameit::Runner.editor
-    def editr(screenshot)
+    def editor(screenshot)
       if screenshot.mac?
         return MacEditor.new(screenshot)
       else
-        return RTLEditor.new(screenshot, Frameit.config[:debug])
+        return RTLEditor.new(screenshot, Frameit.config[:debug_mode])
       end
     end
   end

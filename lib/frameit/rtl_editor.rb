@@ -9,7 +9,7 @@ module Frameit
 
     @@bidi = Bidi.new
 
-    def fetch(type)
+    def fetch_text(type)
       text = super(type)
       @@bidi.to_visual(reshape(text))
     end
