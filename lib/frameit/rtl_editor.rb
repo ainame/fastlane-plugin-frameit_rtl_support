@@ -1,4 +1,3 @@
-require 'frameit'
 require 'bidi'
 require_relative './arabic_reshaper'
 

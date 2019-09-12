@@ -1,4 +1,3 @@
-require 'frameit'
 require_relative 'rtl_editor'
 
 module Frameit
