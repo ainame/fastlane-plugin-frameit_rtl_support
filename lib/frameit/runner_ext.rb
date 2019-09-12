@@ -6,9 +6,11 @@ module Frameit
     # override Frameit::Runner.editor
     def editor(screenshot)
       if screenshot.mac?
-        return MacEditor.new(screenshot)
-      else
+        return ::Frameit::MacEditor.new(screenshot)
+      elsif screenshot.path.include?('ar')
         return ::Frameit::RTLEditor.new(screenshot, Frameit.config[:debug_mode])
+      else
+        return ::Frameit::Editor.new(screenshot, Frameit.config[:debug_mode])
       end
     end
   end
